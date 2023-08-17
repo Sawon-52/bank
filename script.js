@@ -14,15 +14,14 @@ document.getElementById('deposite-btn').addEventListener('click', function(){
     depositeField.innerText = currentDepositeTotal;
 
     // add balance 
-    
     const previousBalanceElement = document.getElementById('balance-total');
     const previousBalanceString = previousBalanceElement.innerText;
     const previousBalance = parseFloat(previousBalanceString);
 
-    const totalBalance = currentDepositeTotal + previousBalance ;
+    const totalBalance = previousDepositeAmmount + newDepositeAmmount;
     previousBalanceElement.innerText = totalBalance;
 
-
+    
     // clear the deposite field
     depositInputForm.value = '';
 })
