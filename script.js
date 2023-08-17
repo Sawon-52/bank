@@ -28,20 +28,29 @@ document.getElementById('deposite-btn').addEventListener('click', function(){
 
 document.getElementById('withdrow-btn').addEventListener('click', function(){
     //console.log('clicked');
-    const depositInputForm = document.getElementById('deposite-form');
-    const newDepositeAmmountString = depositInputForm.value;
-    const newDepositeAmmount = parseFloat(newDepositeAmmountString);
+    const withdrowInputForm = document.getElementById('withdrow-form');
+    const newWithdrowAmmountString = withdrowInputForm.value;
+    const newWithdrowAmmount = parseFloat(newWithdrowAmmountString);
     // console.log(depositeValue);
 
-    const depositeField = document.getElementById('deposite-amount');
-    const previousDepositeAmmountString = depositeField.innerText;
-    const previousDepositeAmmount = parseFloat(previousDepositeAmmountString);
+    const withdrowField = document.getElementById('withdrow-amount');
+    const previousWithdrowAmmountString = withdrowField.innerText;
+    const previousWithdrowAmmount = parseFloat(previousWithdrowAmmountString);
     // console.log(previousDepositeAmmount);
 
-    const currentDepositeTotal = previousDepositeAmmount + newDepositeAmmount;
-    depositeField.innerText = currentDepositeTotal;
+    const currentWithdrowTotal = previousWithdrowAmmount + newWithdrowAmmount;
+    withdrowField.innerText = currentWithdrowTotal;
+
+    // add balance 
+    const previousBalanceElement = document.getElementById('balance-total');
+    const previousBalanceString = previousBalanceElement.innerText;
+    const previousBalance = parseFloat(previousBalanceString);
+
+    const totalBalance = previousBalance - newWithdrowAmmount;
+    previousBalanceElement.innerText = totalBalance;
+
 
     // clear the deposite field
-    depositInputForm.value = '';
+    withdrowInputForm.value = '';
 })
 
