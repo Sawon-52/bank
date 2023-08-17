@@ -13,10 +13,12 @@ document.getElementById('btn-submit').addEventListener('click', function(){
 
     // Danger: varify email and password
     if(email === 'mehedi@gmail.com' && password === '1234'){
-        console.log('valid user')
+        // console.log('valid user')
+        window.location.href='dashboard.html';
     }
     else{
-        console.log('invalid user')
+        // console.log('invalid user')
+        alert('Wrong Password and Email');
     }
 
 })
