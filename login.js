@@ -4,10 +4,19 @@ document.getElementById('btn-submit').addEventListener('click', function(){
     // step 02: get email 
     const emailField = document.getElementById('user-email');
     const email = emailField.value;
-    console.log(email);
-    
+    // console.log(email);
+
     // get password 
     const passField = document.getElementById('user-pass');
     const password = passField.value;
-    console.log(password);
+    // console.log(password);
+
+    // Danger: varify email and password
+    if(email === 'mehedi@gmail.com' && password === '1234'){
+        console.log('valid user')
+    }
+    else{
+        console.log('invalid user')
+    }
+
 })
